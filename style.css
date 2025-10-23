@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5f6e5;
+}
+
+h1,
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  text-align: center;
+  color: #efaca4;
+}
+
+h2 {
+  color: #3e8340;
+}
+
+.question {
+  background-color: #ffd6d1;
+  padding: 0.5em 0 1em 1em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+}
+
+button {
+  padding: 1em;
+  border-radius: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3e8340;
+  color: #0a420c;
+  background-color: #efaca4;
+  font-weight: 700;
+  cursor: pointer;
+}
+.verifier {
+  margin-top: 1em;
+  padding: 0.5em;
+  border-color: #3e8340;
+  color: #0a420c;
+  background-color: rgb(207, 245, 150);
+  transition: all 0.2s ease-in;
+}
+.verifier:hover {
+  background-color: #efaca4;
+}
+
+.qst1,
+.qst2,
+.qst3,
+.qst4,
+.qst5 {
+  background-color: #ffd6d1;
+  padding: 0.5em 0 0.7em 1em;
+  border-radius: 1em;
+}
+.qst1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.qst2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.qst3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.qst4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.qst5 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.qst1 .choix1,
+.qst1 .choix2 {
+  display: inline-block;
+  background-color: greenyellow;
+}
+
+.qst2 .choix2,
+.qst2 .choix3 {
+  display: inline-block;
+  background-color: greenyellow;
+}
+
+.qst3 .choix1,
+.qst3 .choix3 {
+  display: inline-block;
+  background-color: greenyellow;
+}
+
+.qst4 .choix1 {
+  display: inline-block;
+  background-color: greenyellow;
+}
+
+.qst5 .choix3 {
+  display: inline-block;
+  background-color: greenyellow;
+}
