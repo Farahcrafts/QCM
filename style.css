@@ -39,6 +39,11 @@ button {
   background-color: #efaca4;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background-color: rgb(207, 245, 150);
 }
 .verifier {
   margin-top: 1em;

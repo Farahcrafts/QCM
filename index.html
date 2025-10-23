@@ -10,85 +10,96 @@
   <body>
     <h1>Quiz de culture générale : informatique et géographie</h1>
     <br />
-    <div class="question">
-      <h2>
-        Question1: Lesquels des éléments suivants sont des langages de
-        programmation ?
-      </h2>
+    <form action="">
+      <div class="question">
+        <h2>
+          Question1: Lesquels des éléments suivants sont des langages de
+          programmation ?
+        </h2>
 
-      <input type="checkbox" name="choix1" id="choix11" />Python
-      <br />
-      <input type="checkbox" name="choix2" id="choix12" />Java
-      <br />
-      <input type="checkbox" name="choix3" id="choix13" />HTML
-      <br />
-      <button class="verifier" id="btn1" onclick="verifier1()">Verifier</button>
-      <label id="rps1"></label>
-    </div>
+        <input type="checkbox" name="choix1" id="choix11" />Python
+        <br />
+        <input type="checkbox" name="choix2" id="choix12" />Java
+        <br />
+        <input type="checkbox" name="choix3" id="choix13" />HTML
+        <br />
+        <button type="button" class="verifier" id="btn1" onclick="verifier1()">
+          Verifier
+        </button>
+        <label id="rps1"></label>
+      </div>
 
-    <div class="question">
-      <h2>Question2: Lesquels des éléments suivants sont des continents ?</h2>
-      <input type="checkbox" name="choix1" id="choix21" />Russie
-      <br />
-      <input type="checkbox" name="choix2" id="choix22" />Europe
-      <br />
-      <input type="checkbox" name="choix3" id="choix23" />Asie
-      <br />
-      <button class="verifier" id="btn2" onclick="verifier2()">Verifier</button>
-      <br />
-      <label id="rps2"></label>
-    </div>
+      <div class="question">
+        <h2>Question2: Lesquels des éléments suivants sont des continents ?</h2>
+        <input type="checkbox" name="choix1" id="choix21" />Russie
+        <br />
+        <input type="checkbox" name="choix2" id="choix22" />Europe
+        <br />
+        <input type="checkbox" name="choix3" id="choix23" />Asie
+        <br />
+        <button type="button" class="verifier" id="btn2" onclick="verifier2()">
+          Verifier
+        </button>
+        <label id="rps2"></label>
+      </div>
 
-    <div class="question">
-      <h2>
-        Question3:Lesquels des éléments suivants sont des navigateurs web ?
-      </h2>
-      <input type="checkbox" name="choix1" id="choix31" />Google Chrome
-      <br />
-      <input type="checkbox" name="choix2" id="choix32" />Microsoft Word
-      <br />
-      <input type="checkbox" name="choix3" id="choix33" />Mozzila Firefox
-      <br />
-      <button class="verifier" id="btn3" onclick="verifier3()">Verifier</button>
-      <br />
-      <label id="rps3"></label>
-    </div>
+      <div class="question">
+        <h2>
+          Question3:Lesquels des éléments suivants sont des navigateurs web ?
+        </h2>
+        <input type="checkbox" name="choix1" id="choix31" />Google Chrome
+        <br />
+        <input type="checkbox" name="choix2" id="choix32" />Microsoft Word
+        <br />
+        <input type="checkbox" name="choix3" id="choix33" />Mozzila Firefox
+        <br />
+        <button type="button" class="verifier" id="btn3" onclick="verifier3()">
+          Verifier
+        </button>
+        <label id="rps3"></label>
+      </div>
 
-    <div class="question">
-      <h2>Question4: Quelle est la capitale de la France?</h2>
-      <input id="choix41" type="radio" name="qst4" value="choix1" />Paris
-      <br />
-      <input id="choix42" type="radio" name="qst4" value="choix2" />Lyon
-      <br />
-      <input id="choix43" type="radio" name="qst4" value="choix3" />Marseille
-      <br />
-      <button class="verifier" id="btn4" onclick="verifier4()">Verifier</button>
-      <br />
-      <label id="rps4"></label>
-    </div>
+      <div class="question">
+        <h2>Question4: Quelle est la capitale de la France?</h2>
+        <input id="choix41" type="radio" name="qst4" value="choix1" />Paris
+        <br />
+        <input id="choix42" type="radio" name="qst4" value="choix2" />Lyon
+        <br />
+        <input id="choix43" type="radio" name="qst4" value="choix3" />Marseille
+        <br />
+        <button type="button" class="verifier" id="btn4" onclick="verifier4()">
+          Verifier
+        </button>
 
-    <div class="question">
-      <h2>
-        Question5: Lequel des éléments suivants est un système d’exploitation ?
-      </h2>
-      <input id="choix51" type="radio" name="qst5" value="choix1" />Chrome
-      <br />
-      <input id="choix52" type="radio" name="qst5" value="choix2" />Microsoft
-      Word
-      <br />
-      <input id="choix53" type="radio" name="qst5" value="choix3" />Windows
-      <br />
-      <button class="verifier" id="btn5" onclick="verifier5()">Verifier</button>
-      <br />
-      <label id="rps5"></label>
-    </div>
+        <label id="rps4"></label>
+      </div>
 
-    <div class="buttons">
-      <button type="reset">Initialiser</button>
-      <a href="resultats.html"
-        ><button>Afficher les resultats corrects</button></a
-      >
-    </div>
+      <div class="question">
+        <h2>
+          Question5: Lequel des éléments suivants est un système d’exploitation
+          ?
+        </h2>
+        <input id="choix51" type="radio" name="qst5" value="choix1" />Chrome
+        <br />
+        <input id="choix52" type="radio" name="qst5" value="choix2" />Microsoft
+        Word
+        <br />
+        <input id="choix53" type="radio" name="qst5" value="choix3" />Windows
+        <br />
+        <button type="button" class="verifier" id="btn5" onclick="verifier5()">
+          Verifier
+        </button>
+
+        <label id="rps5"></label>
+      </div>
+
+      <div class="buttons">
+        <button type="reset">Initialiser</button>
+        <a href="resultats.html"
+          ><button type="button">Afficher les resultats corrects</button></a
+        >
+      </div>
+    </form>
 
     <script>
       function verifier1() {
