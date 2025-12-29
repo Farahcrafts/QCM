@@ -1,81 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #e5f6e5;
-  margin: 20px;
-}
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e5f6e5; /* Fond vert clair */
+        padding: 20px;
+        text-align: center;
+      }
 
-h1, h2 {
-  font-family: "Archivo Black", sans-serif;
-  text-align: center;
-  color: #efaca4;
-}
+      h1 {
+        font-family: "Archivo Black", sans-serif;
+        color: #efaca4; /* Titre rose */
+        margin-bottom: 30px;
+      }
 
-h2 {
-  color: #3e8340;
-}
+      /* Style du conteneur de question */
+      .question {
+        background-color: #ffd6d1; /* Fond rose */
+        padding: 20px;
+        border-radius: 1em;
+        margin-bottom: 1em;
+        text-align: left; /* Texte aligné à gauche pour la lisibilité */
+        color: #3e8340; /* Texte vert foncé */
+        max-width: 600px; /* Pour ne pas que ce soit trop large */
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-.question {
-  background-color: #ffd6d1;
-  padding: 0.5em 0 1em 1em;
-  border-radius: 1em;
-  margin-bottom: 1em;
-}
+      /* Style de la question en gras */
+      .question strong {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 10px;
+        color: #0a420c;
+      }
 
-.buttons {
-  margin-top: 2em;
-  display: flex;
-  justify-content: center;
-  column-gap: 1em;
-}
+      /* Style des inputs (cases à cocher/radio) */
+      input[type="checkbox"],
+      input[type="radio"] {
+        transform: scale(1.2); /* Rendre les cases un peu plus grosses */
+        margin-right: 10px;
+        margin-bottom: 8px;
+        accent-color: #3e8340; /* Couleur verte quand c'est coché */
+      }
 
-button {
-  padding: 1em;
-  border-radius: 1em;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #3e8340;
-  color: #0a420c;
-  background-color: #efaca4;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
+      /* Style des boutons */
+      input[type="button"] {
+        padding: 1em;
+        border-radius: 1em;
+        border: 1px solid #3e8340;
+        color: #0a420c;
+        background-color: #efaca4;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin: 10px 5px; /* Espacement entre les boutons */
+        font-size: 1em;
+      }
 
-button:hover {
-  background-color: rgb(207, 245, 150);
-}
-
-.verifier {
-  margin-top: 1em;
-  padding: 0.5em;
-  border-color: #3e8340;
-  color: #0a420c;
-  background-color: rgb(207, 245, 150);
-  transition: all 0.2s ease-in;
-}
-
-.verifier:hover {
-  background-color: #efaca4;
-}
-
-/* Styles pour resultats.html */
-.qst1, .qst2, .qst3, .qst4, .qst5 {
-  background-color: #ffd6d1;
-  padding: 0.5em 0 0.7em 1em;
-  border-radius: 1em;
-  margin-bottom: 20px;
-}
-
-.qst1, .qst2, .qst3, .qst4, .qst5 {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/* Mise en couleur des bonnes réponses */
-.qst1 .choix1, .qst1 .choix2 { display: inline-block; background-color: greenyellow; padding: 5px; border-radius: 5px; }
-.qst2 .choix2, .qst2 .choix3 { display: inline-block; background-color: greenyellow; padding: 5px; border-radius: 5px; }
-.qst3 .choix1, .qst3 .choix3 { display: inline-block; background-color: greenyellow; padding: 5px; border-radius: 5px; }
-.qst4 .choix1 { display: inline-block; background-color: greenyellow; padding: 5px; border-radius: 5px; }
-.qst5 .choix3 { display: inline-block; background-color: greenyellow; padding: 5px; border-radius: 5px; }
+      input[type="button"]:hover {
+        background-color: rgb(207, 245, 150); /* Vert clair au survol */
+      }
