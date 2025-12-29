@@ -1,175 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QCM</title>
+    <title>QCM Culture Générale</title>
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Quiz de culture générale : informatique et géographie</h1>
+    <h1>Quiz de culture générale : Informatique et Géographie</h1>
     <br />
     <form action="">
+      
       <div class="question">
-        <h2>
-          Question1: Lesquels des éléments suivants sont des langages de
-          programmation ?
-        </h2>
-
-        <input type="checkbox" name="choix1" id="choix11" />Python
-        <br />
-        <input type="checkbox" name="choix2" id="choix12" />Java
-        <br />
-        <input type="checkbox" name="choix3" id="choix13" />HTML
-        <br />
-        <button type="button" class="verifier" id="btn1" onclick="verifier1()">
-          Verifier
-        </button>
+        <h2>Question 1: Lesquels des éléments suivants sont des langages de programmation ?</h2>
+        <input type="checkbox" name="choix1" id="choix11" /> Python <br />
+        <input type="checkbox" name="choix2" id="choix12" /> Java <br />
+        <input type="checkbox" name="choix3" id="choix13" /> HTML <br />
+        <button type="button" class="verifier" onclick="verifier1()">Verifier</button>
         <label id="rps1"></label>
       </div>
 
       <div class="question">
-        <h2>Question2: Lesquels des éléments suivants sont des continents ?</h2>
-        <input type="checkbox" name="choix1" id="choix21" />Russie
-        <br />
-        <input type="checkbox" name="choix2" id="choix22" />Europe
-        <br />
-        <input type="checkbox" name="choix3" id="choix23" />Asie
-        <br />
-        <button type="button" class="verifier" id="btn2" onclick="verifier2()">
-          Verifier
-        </button>
+        <h2>Question 2: Lesquels des éléments suivants sont des continents ?</h2>
+        <input type="checkbox" name="choix1" id="choix21" /> Russie <br />
+        <input type="checkbox" name="choix2" id="choix22" /> Europe <br />
+        <input type="checkbox" name="choix3" id="choix23" /> Asie <br />
+        <button type="button" class="verifier" onclick="verifier2()">Verifier</button>
         <label id="rps2"></label>
       </div>
 
       <div class="question">
-        <h2>
-          Question3:Lesquels des éléments suivants sont des navigateurs web ?
-        </h2>
-        <input type="checkbox" name="choix1" id="choix31" />Google Chrome
-        <br />
-        <input type="checkbox" name="choix2" id="choix32" />Microsoft Word
-        <br />
-        <input type="checkbox" name="choix3" id="choix33" />Mozzila Firefox
-        <br />
-        <button type="button" class="verifier" id="btn3" onclick="verifier3()">
-          Verifier
-        </button>
+        <h2>Question 3: Lesquels des éléments suivants sont des navigateurs web ?</h2>
+        <input type="checkbox" name="choix1" id="choix31" /> Google Chrome <br />
+        <input type="checkbox" name="choix2" id="choix32" /> Microsoft Word <br />
+        <input type="checkbox" name="choix3" id="choix33" /> Mozilla Firefox <br />
+        <button type="button" class="verifier" onclick="verifier3()">Verifier</button>
         <label id="rps3"></label>
       </div>
 
       <div class="question">
-        <h2>Question4: Quelle est la capitale de la France?</h2>
-        <input id="choix41" type="radio" name="qst4" value="choix1" />Paris
-        <br />
-        <input id="choix42" type="radio" name="qst4" value="choix2" />Lyon
-        <br />
-        <input id="choix43" type="radio" name="qst4" value="choix3" />Marseille
-        <br />
-        <button type="button" class="verifier" id="btn4" onclick="verifier4()">
-          Verifier
-        </button>
-
+        <h2>Question 4: Quelle est la capitale de la France ?</h2>
+        <input id="choix41" type="radio" name="qst4" value="choix1" /> Paris <br />
+        <input id="choix42" type="radio" name="qst4" value="choix2" /> Lyon <br />
+        <input id="choix43" type="radio" name="qst4" value="choix3" /> Marseille <br />
+        <button type="button" class="verifier" onclick="verifier4()">Verifier</button>
         <label id="rps4"></label>
       </div>
 
       <div class="question">
-        <h2>
-          Question5: Lequel des éléments suivants est un système d’exploitation
-          ?
-        </h2>
-        <input id="choix51" type="radio" name="qst5" value="choix1" />Chrome
-        <br />
-        <input id="choix52" type="radio" name="qst5" value="choix2" />Microsoft
-        Word
-        <br />
-        <input id="choix53" type="radio" name="qst5" value="choix3" />Windows
-        <br />
-        <button type="button" class="verifier" id="btn5" onclick="verifier5()">
-          Verifier
-        </button>
-
+        <h2>Question 5: Lequel des éléments suivants est un système d’exploitation ?</h2>
+        <input id="choix51" type="radio" name="qst5" value="choix1" /> Chrome <br />
+        <input id="choix52" type="radio" name="qst5" value="choix2" /> Microsoft Word <br />
+        <input id="choix53" type="radio" name="qst5" value="choix3" /> Windows <br />
+        <button type="button" class="verifier" onclick="verifier5()">Verifier</button>
         <label id="rps5"></label>
       </div>
 
       <div class="buttons">
         <button type="reset">Initialiser</button>
-        <a href="resultats.html"
-          ><button type="button">Afficher les resultats corrects</button></a
-        >
+        <a href="resultats.html"><button type="button">Afficher les resultats corrects</button></a>
       </div>
     </form>
 
     <script>
       function verifier1() {
-        const checkbox1 = document.getElementById("choix11");
-        const checkbox2 = document.getElementById("choix12");
-        const message1 = document.getElementById("rps1");
+        const py = document.getElementById("choix11");
+        const java = document.getElementById("choix12");
+        const html = document.getElementById("choix13"); // HTML n'est pas un langage de prog strict, donc on suppose qu'il ne faut pas le cocher
+        const message = document.getElementById("rps1");
 
-        if (checkbox1.checked && checkbox2.checked) {
-          message1.innerHTML =
-            "<span style='color: green; font-weight: bold;'> Correct</span>";
+        // On vérifie que Python et Java sont cochés
+        if (py.checked && java.checked) {
+             // Optionnel : ajouter && !html.checked si on veut être strict
+          message.innerHTML = "<span style='color: green; font-weight: bold;'> Correct</span>";
         } else {
-          message1.innerHTML =
-            "<span style='color: red; font-weight: bold;'> Incorrect </span>";
+          message.innerHTML = "<span style='color: red; font-weight: bold;'> Incorrect </span>";
         }
       }
 
       function verifier2() {
-        const checkbox3 = document.getElementById("choix22");
-        const checkbox4 = document.getElementById("choix23");
+        const europe = document.getElementById("choix22");
+        const asie = document.getElementById("choix23");
+        const message = document.getElementById("rps2");
 
-        const message2 = document.getElementById("rps2");
-
-        if (checkbox3.checked && checkbox4.checked) {
-          message2.innerHTML =
-            "<span style='color: green; font-weight: bold;'> Correct</span>";
+        if (europe.checked && asie.checked) {
+          message.innerHTML = "<span style='color: green; font-weight: bold;'> Correct</span>";
         } else {
-          message2.innerHTML =
-            "<span style='color: red; font-weight: bold;'> Incorrect </span>";
+          message.innerHTML = "<span style='color: red; font-weight: bold;'> Incorrect </span>";
         }
       }
 
       function verifier3() {
-        const checkbox5 = document.getElementById("choix31");
-        const checkbox6 = document.getElementById("choix33");
-
+        const chrome = document.getElementById("choix31");
+        const firefox = document.getElementById("choix33");
         const message = document.getElementById("rps3");
 
-        if (checkbox5.checked && checkbox6.checked) {
-          message.innerHTML =
-            "<span style='color: green; font-weight: bold;'> Correct</span>";
+        if (chrome.checked && firefox.checked) {
+          message.innerHTML = "<span style='color: green; font-weight: bold;'> Correct</span>";
         } else {
-          message.innerHTML =
-            "<span style='color: red; font-weight: bold;'> Incorrect </span>";
+          message.innerHTML = "<span style='color: red; font-weight: bold;'> Incorrect </span>";
         }
       }
 
       function verifier4() {
-        const checkbox7 = document.getElementById("choix41");
-
+        const paris = document.getElementById("choix41");
         const message = document.getElementById("rps4");
 
-        if (checkbox7.checked) {
-          message.innerHTML =
-            "<span style='color: green; font-weight: bold;'> Correct</span>";
+        if (paris.checked) {
+          message.innerHTML = "<span style='color: green; font-weight: bold;'> Correct</span>";
         } else {
-          message.innerHTML =
-            "<span style='color: red; font-weight: bold;'> Incorrect </span>";
+          message.innerHTML = "<span style='color: red; font-weight: bold;'> Incorrect </span>";
         }
       }
 
       function verifier5() {
-        const checkbox7 = document.getElementById("choix51");
+        // CORRECTION ICI : On vérifie Windows (choix53), pas Chrome
+        const windows = document.getElementById("choix53");
         const message = document.getElementById("rps5");
 
-        if (checkbox7.checked) {
-          message.innerHTML =
-            "<span style='color: green; font-weight: bold;'> Correct</span>";
+        if (windows.checked) {
+          message.innerHTML = "<span style='color: green; font-weight: bold;'> Correct</span>";
         } else {
-          message.innerHTML =
-            "<span style='color: red; font-weight: bold;'> Incorrect </span>";
+          message.innerHTML = "<span style='color: red; font-weight: bold;'> Incorrect </span>";
         }
       }
     </script>
