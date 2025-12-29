@@ -48,6 +48,32 @@
         <input type="button" value="Résultats" onclick="afficherResultat()">
     </form>
 
+    <h2>Exercice 2</h2>
+    <input type="text" id="email" placeholder="votre@email.com">
+    <button onclick="verifierEmail()">Vérifier</button>
+
+    
+<h2>Exercice 4</h2>
+    <form id="timeForm">
+        <h3>Temps 1</h3>
+        H: <input type="number" id="h1"> M: <input type="number" id="m1"> S: <input type="number" id="s1"><br>
+        
+        <h3>Temps 2</h3>
+        H: <input type="number" id="h2"> M: <input type="number" id="m2"> S: <input type="number" id="s2"><br>
+
+        <h3>Temps 3</h3>
+        H: <input type="number" id="h3"> M: <input type="number" id="m3"> S: <input type="number" id="s3"><br>
+
+        <h3>Résultat Total</h3>
+        Jours: <input type="text" id="res_j">
+        Heures: <input type="text" id="res_h">
+        Minutes: <input type="text" id="res_m">
+        Secondes: <input type="text" id="res_s"><br><br>
+
+        <button type="button" onclick="calculerSomme()">Somme</button>
+        <button type="reset">Effacer</button>
+    </form>
+    
     <script>
         // 1. Initialiser (Reset)
         function resetQCM() {
@@ -112,6 +138,78 @@
             // Ouverture de la fenêtre de résultat
             let win = window.open("", "Resultat", "width=400,height=400");
             win.document.write(rapport);
+        }
+
+
+
+        //exercice 2
+        function verifierEmail() {
+            // 1. Récupérer la valeur
+            var email = document.getElementById("email").value;
+            
+            // 2. Trouver la position de '@' et du dernier '.'
+            var atPos = email.indexOf("@");
+            var dotPos = email.lastIndexOf(".");
+
+            // 3. Appliquer les règles
+            // atPos > 0 : '@' existe et n'est pas la 1ère lettre (il y a du texte avant)
+            // dotPos > atPos + 1 : Le point est après l'@ (et pas collé juste après)
+            if (atPos > 0 && dotPos > atPos + 1) {
+                alert("Email Valide !");
+            } else {
+                alert("Email Invalide.");
+            }
+        }
+
+        //ex 3
+        function trier(liste) {
+    // La fonction de comparaison (a, b) => a - b assure un tri numérique croissant
+    return liste.sort(function(a, b) {
+        return a - b;
+    });
+}
+
+// --- Exemple d'utilisation (pour tester ou montrer au prof) ---
+var mesNombres = [34, 1, 100, 5, 2];
+console.log(trier(mesNombres)); // Affiche : [1, 2, 5, 34, 100]
+
+        //exercice 4
+        function calculerSomme() {
+            // 1. Fonction utilitaire pour convertir une ligne (h,m,s) en secondes totales
+            // Le "+" devant document... sert à forcer la conversion en Nombre (comme parseInt)
+            function getSeconds(idH, idM, idS) {
+                let h = +document.getElementById(idH).value || 0; // || 0 gère les cases vides
+                let m = +document.getElementById(idM).value || 0;
+                let s = +document.getElementById(idS).value || 0;
+                return (h * 3600) + (m * 60) + s;
+            }
+
+            // 2. On calcule le total global en secondes
+            let totalSec = getSeconds('h1', 'm1', 's1') + 
+                           getSeconds('h2', 'm2', 's2') + 
+                           getSeconds('h3', 'm3', 's3');
+
+            // 3. On reconvertit (Algorithme important à retenir !)
+            
+            // Jours = Total divisé par 86400 (nombre de sec dans 24h)
+            let j = Math.floor(totalSec / 86400); 
+            totalSec = totalSec % 86400; // On garde le "reste" pour la suite
+
+            // Heures = Le reste divisé par 3600
+            let h = Math.floor(totalSec / 3600);
+            totalSec = totalSec % 3600; // On garde le reste
+
+            // Minutes = Le reste divisé par 60
+            let m = Math.floor(totalSec / 60);
+            
+            // Secondes = Ce qu'il reste à la fin
+            let s = totalSec % 60;
+
+            // 4. Affichage
+            document.getElementById('res_j').value = j;
+            document.getElementById('res_h').value = h;
+            document.getElementById('res_m').value = m;
+            document.getElementById('res_s').value = s;
         }
     </script>
 </body>
